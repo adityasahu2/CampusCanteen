@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CampusCanteen - Food Ordering</title>
+    <title>CampusCanteen</title>
+    <link rel="icon" type="image/png/webp" href="Assets/CC icon.webp">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- favicon -->
-    <link rel="icon" href="assets/a.jpg" type="image/x-icon">
 </head>
 <body>
     <nav>
@@ -33,7 +31,6 @@
     <main>
         <section id="landing-section" class="landing-section">
             <div class="hero">
-                <!-- Replace the floating-shapes div content with this -->
                 <div class="floating-shapes">
                     <i class="fas fa-pizza-slice shape shape-1"></i>
                     <i class="fas fa-hamburger shape shape-2"></i>
@@ -70,7 +67,6 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Our Menu</h2>
-                    <!-- Update the search-bar div in menu-section -->
                     <div class="search-bar">
                         <div class="search-input-wrapper">
                             <i class="fas fa-search"></i>
@@ -103,13 +99,15 @@
             <div class="container">
                 <div class="section-header">
                     <h2>My Orders</h2>
+                    <!-- <button onclick="clearOrderHistory()" class="order-action-btn" style="background: #ff7675; color: white;">
+                        <i class="fas fa-trash"></i> Clear History
+                    </button> -->
                 </div>
                 <div class="orders-list" id="orders-list"></div>
             </div>
         </section>
     </main>
 
-    <!-- Add this if not already present -->
     <div id="cart-modal" class="cart-modal hidden">
         <div class="cart-header">
             <h3>Your Cart</h3>
@@ -139,14 +137,17 @@
             <div class="footer-section">
                 <h3>Follow Us</h3>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/ratikantabehera/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/ratikantabehera/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/ratikantabehera/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/ratikantabehera/" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 CampusCanteen. All rights reserved.</p>
+            <p>&copy; 2024 CampusCanteen. All rights reserved. <br>Design & Developed By By <a
+                    href="https://www.linkedin.com/in/ratikantabehera/"  target="_blank"
+                    style="color: rgb(255, 255, 255); ">Ratikanta</a> with 💖</p>
         </div>
     </footer>
 

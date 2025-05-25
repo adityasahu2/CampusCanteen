@@ -192,7 +192,7 @@ nav {
 
 .shape {
     position: absolute;
-    color: rgba(100, 255, 218, 0.1);
+    color: rgba(29, 255, 202, 0.373);
     font-size: 3rem;
     animation: float 20s infinite;
 }
@@ -1128,6 +1128,7 @@ nav {
 .footer-section a:hover {
     color: #64ffda;
     transform: translateX(5px);
+    
 }
 
 .footer-section p {
@@ -1136,6 +1137,10 @@ nav {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.footer-bottom a{
+    text-decoration: none;
 }
 
 .social-links {

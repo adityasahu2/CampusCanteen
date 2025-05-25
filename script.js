@@ -1,4 +1,4 @@
-// CampusCanteen JavaScript - Enhanced Complete Functionality
+
 
 // Global Variables
 let currentSection = 'landing';
@@ -9,105 +9,216 @@ let menuItems = [];
 // Sample Menu Data
 const sampleMenuItems = [
     {
-        id: 1,
-        name: "Classic Burger",
-        description: "Juicy beef patty with fresh lettuce, tomatoes, and special sauce",
-        price: 149,
-        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop",
-        category: "main-course",
-        type: "non-veg",
-        spiceLevel: "mild"
+        "id": 1,
+        "name": "Classic Burger",
+        "description": "Juicy beef patty with fresh lettuce, tomatoes, and special sauce",
+        "price": 149,
+        "image": "assets/1.webp",
+        "category": "main-course",
+        "type": "non-veg",
+        "spiceLevel": "mild"
     },
     {
-        id: 2,
-        name: "Margherita Pizza",
-        description: "Fresh mozzarella, tomatoes, and basil on crispy pizza base",
-        price: 199,
-        image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=400&h=300&fit=crop",
-        category: "main-course",
-        type: "veg",
-        spiceLevel: "mild"
+        "id": 2,
+        "name": "Margherita Pizza",
+        "description": "Fresh mozzarella, tomatoes, and basil on crispy pizza base",
+        "price": 199,
+        "image": "assets/2.webp",
+        "category": "main-course",
+        "type": "veg",
+        "spiceLevel": "mild"
     },
     {
-        id: 3,
-        name: "Samosa",
-        description: "Crispy fried pastry filled with spiced potatoes and peas",
-        price: 25,
-        image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop",
-        category: "snacks",
-        type: "veg",
-        spiceLevel: "medium"
+        "id": 3,
+        "name": "Samosa",
+        "description": "Crispy fried pastry filled with spiced potatoes and peas",
+        "price": 25,
+        "image": "assets/3.webp",
+        "category": "snacks",
+        "type": "veg",
+        "spiceLevel": "medium"
     },
     {
-        id: 4,
-        name: "Masala Chai",
-        description: "Traditional Indian spiced tea with milk and aromatic spices",
-        price: 15,
-        image: "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400&h=300&fit=crop",
-        category: "beverages",
-        type: "veg",
-        spiceLevel: "mild"
+        "id": 4,
+        "name": "Masala Chai",
+        "description": "Traditional Indian spiced tea with milk and aromatic spices",
+        "price": 15,
+        "image": "assets/4.webp",
+        "category": "beverages",
+        "type": "veg",
+        "spiceLevel": "mild"
     },
     {
-        id: 5,
-        name: "Chicken Biryani",
-        description: "Aromatic basmati rice with tender chicken and traditional spices",
-        price: 179,
-        image: "https://images.unsplash.com/photo-1563379091339-03246cb7d563?w=400&h=300&fit=crop",
-        category: "main-course",
-        type: "non-veg",
-        spiceLevel: "hot"
+        "id": 5,
+        "name": "Chicken Biryani",
+        "description": "Aromatic basmati rice with tender chicken and traditional spices",
+        "price": 179,
+        "image": "assets/5.webp",
+        "category": "main-course",
+        "type": "non-veg",
+        "spiceLevel": "hot"
     },
     {
-        id: 6,
-        name: "Cold Coffee",
-        description: "Refreshing iced coffee with whipped cream and chocolate",
-        price: 65,
-        image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop",
-        category: "beverages",
-        type: "veg",
-        spiceLevel: "mild"
+        "id": 6,
+        "name": "Cold Coffee",
+        "description": "Refreshing iced coffee with whipped cream and chocolate",
+        "price": 65,
+        "image": "assets/6.webp",
+        "category": "beverages",
+        "type": "veg",
+        "spiceLevel": "mild"
     },
     {
-        id: 7,
-        name: "Paneer Tikka",
-        description: "Grilled cottage cheese cubes marinated in spices and yogurt",
-        price: 129,
-        image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
-        category: "snacks",
-        type: "veg",
-        spiceLevel: "medium"
+        "id": 7,
+        "name": "Paneer Tikka",
+        "description": "Grilled cottage cheese cubes marinated in spices and yogurt",
+        "price": 129,
+        "image": "assets/7.webp",
+        "category": "snacks",
+        "type": "veg",
+        "spiceLevel": "medium"
     },
     {
-        id: 8,
-        name: "Chicken Wings",
-        description: "Spicy grilled chicken wings with BBQ sauce",
-        price: 159,
-        image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
-        category: "snacks",
-        type: "non-veg",
-        spiceLevel: "hot"
+        "id": 8,
+        "name": "Chicken Wings",
+        "description": "Spicy grilled chicken wings with BBQ sauce",
+        "price": 159,
+        "image": "assets/8.webp",
+        "category": "snacks",
+        "type": "non-veg",
+        "spiceLevel": "hot"
     },
     {
-        id: 9,
-        name: "Fresh Lime Soda",
-        description: "Refreshing lime soda with mint and soda water",
-        price: 35,
-        image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=300&fit=crop",
-        category: "beverages",
-        type: "veg",
-        spiceLevel: "mild"
+        "id": 9,
+        "name": "Fresh Lime Soda",
+        "description": "Refreshing lime soda with mint and soda water",
+        "price": 35,
+        "image": "assets/9.webp",
+        "category": "beverages",
+        "type": "veg",
+        "spiceLevel": "mild"
     },
     {
-        id: 10,
-        name: "Veg Sandwich",
-        description: "Grilled sandwich with fresh vegetables and cheese",
-        price: 89,
-        image: "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=400&h=300&fit=crop",
-        category: "snacks",
-        type: "veg",
-        spiceLevel: "mild"
+        "id": 10,
+        "name": "Veg Sandwich",
+        "description": "Grilled sandwich with fresh vegetables and cheese",
+        "price": 89,
+        "image": "assets/10.webp",
+        "category": "snacks",
+        "type": "veg",
+        "spiceLevel": "mild"
+    },
+    {
+        "id": 11,
+        "name": "Butter Chicken",
+        "description": "Creamy tomato-based curry with tender chicken pieces",
+        "price": 189,
+        "image": "assets/11.webp",
+        "category": "main-course",
+        "type": "non-veg",
+        "spiceLevel": "medium"
+    },
+    {
+        "id": 12,
+        "name": "Pasta Alfredo",
+        "description": "Pasta in creamy Alfredo sauce with herbs and cheese",
+        "price": 159,
+        "image": "assets/12.webp",
+        "category": "main-course",
+        "type": "veg",
+        "spiceLevel": "mild"
+    },
+    {
+        "id": 13,
+        "name": "Cheese Garlic Bread",
+        "description": "Toasted bread loaded with garlic butter and melted cheese",
+        "price": 69,
+        "image": "assets/13.webp",
+        "category": "snacks",
+        "type": "veg",
+        "spiceLevel": "mild"
+    },
+    {
+        "id": 14,
+        "name": "Tandoori Momos",
+        "description": "Spicy grilled dumplings with a smoky tandoori flavor",
+        "price": 109,
+        "image": "assets/14.webp",
+        "category": "snacks",
+        "type": "non-veg",
+        "spiceLevel": "hot"
+    },
+    {
+        "id": 15,
+        "name": "Virgin Mojito",
+        "description": "Cool mint and lime refresher with soda and crushed ice",
+        "price": 55,
+        "image": "assets/15.webp",
+        "category": "beverages",
+        "type": "veg",
+        "spiceLevel": "mild"
+    },
+    {
+        "id": 16,
+        "name": "Strawberry Milkshake",
+        "description": "Chilled milkshake with fresh strawberries and cream",
+        "price": 75,
+        "image": "assets/16.webp",
+        "category": "beverages",
+        "type": "veg",
+        "spiceLevel": "mild"
+    },
+    {
+        "id": 17,
+        "name": "Chocolate Brownie",
+        "description": "Fudgy chocolate brownie with a crispy top and soft center",
+        "price": 60,
+        "image": "assets/17.webp",
+        "category": "dessert",
+        "type": "veg",
+        "spiceLevel": "mild"
+    },
+    {
+        "id": 18,
+        "name": "Gulab Jamun",
+        "description": "Sweet Indian dessert made of milk solids soaked in syrup",
+        "price": 45,
+        "image": "assets/18.webp",
+        "category": "dessert",
+        "type": "veg",
+        "spiceLevel": "mild"
+    },
+    {
+        "id": 19,
+        "name": "Veg Pulao",
+        "description": "Aromatic rice dish cooked with vegetables and mild spices",
+        "price": 139,
+        "image": "assets/19.webp",
+        "category": "main-course",
+        "type": "veg",
+        "spiceLevel": "mild"
+    },
+    {
+        "id": 20,
+        "name": "Crispy Corn",
+        "description": "Deep-fried golden corn tossed in tangy spices",
+        "price": 99,
+        "image": "assets/20.webp",
+        "category": "snacks",
+        "type": "veg",
+        "spiceLevel": "medium"
+    },
+    {
+        "id": 21,
+        "name": "Oreo Kulfi",
+        "description": "Creamy traditional Indian kulfi blended with Oreo chunks",
+        "price": 70,
+        "image": "assets/21.webp",
+        "category": "dessert",
+        "type": "veg",
+        "spiceLevel": "mild"
     }
+
 ];
 
 // Initialize the application
@@ -553,7 +664,6 @@ function placeOrder() {
         total: cart.reduce((total, item) => total + (item.price * item.quantity), 0),
         status: 'pending',
         timestamp: new Date().toISOString(),
-        estimatedTime: Math.floor(Math.random() * 20) + 10
     };
 
     orders.push(order);
@@ -571,15 +681,17 @@ function placeOrder() {
     // Simulate order processing
     setTimeout(() => {
         updateOrderStatus(order.id, 'preparing');
-    }, 2000);
+    }, 3000);
     
     setTimeout(() => {
         updateOrderStatus(order.id, 'ready');
-    }, order.estimatedTime * 30000); // Half the estimated time
+   
+    }, 20000); // Half the estimated time
     
     setTimeout(() => {
         updateOrderStatus(order.id, 'completed');
-    }, order.estimatedTime * 60000);
+    
+    },  30000);
 }
 
 function generateOrderId() {
@@ -646,35 +758,42 @@ function renderOrders() {
     // Sort orders by timestamp (newest first)
     const sortedOrders = [...orders].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
-    ordersContainer.innerHTML = sortedOrders.map(order => `
-        <div class="order-card">
-            <div class="order-header">
-                <div class="order-id">Order #${order.id}</div>
-                <div class="order-status status-${order.status}">
-                    <i class="fas fa-${getStatusIcon(order.status)}"></i>
-                    ${order.status.charAt(0).toUpperCase() + order.status.slice(1)}
-                </div>
-            </div>
-            <div class="order-items">
-                ${order.items.map(item => `
-                    <div class="order-item">
-                        <div class="order-item-details">
-                            <strong>${item.name}</strong>
-                            <span>Qty: ${item.quantity}</span>
-                        </div>
-                        <div class="order-item-price">₹${item.price * item.quantity}</div>
+    ordersContainer.innerHTML = `
+        ${sortedOrders.map(order => `
+            <div class="order-card">
+                <div class="order-header">
+                    <div class="order-id">Order #${order.id}</div>
+                    <div class="order-status status-${order.status}">
+                        <i class="fas fa-${getStatusIcon(order.status)}"></i>
+                        ${order.status.charAt(0).toUpperCase() + order.status.slice(1)}
                     </div>
-                `).join('')}
-            </div>
-            <div class="order-total">
-                <div class="order-time">
-                    <i class="fas fa-calendar-alt"></i>
-                    ${formatDateTime(order.timestamp)}
                 </div>
-                <div class="total-amount">Total: ₹${order.total}</div>
+                <div class="order-items">
+                    ${order.items.map(item => `
+                        <div class="order-item">
+                            <div class="order-item-details">
+                                <strong>${item.name}</strong>
+                                <span>Qty: ${item.quantity}</span>
+                            </div>
+                            <div class="order-item-price">₹${item.price * item.quantity}</div>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="order-total">
+                    <div class="order-time">
+                        <i class="fas fa-calendar-alt"></i>
+                        ${formatDateTime(order.timestamp)}
+                    </div>
+                    <div class="total-amount">Total: ₹${order.total}</div>
+                </div>
             </div>
+        `).join('')}
+        <div style="text-align: center; margin-top: 2rem;">
+            <button onclick="clearOrderHistory()" class="order-action-btn" style="background: #ff7675; color: white;">
+                <i class="fas fa-trash"></i> Clear History
+            </button>
         </div>
-    `).join('');
+    `;
 }
 
 function getStatusIcon(status) {
@@ -823,9 +942,18 @@ window.placeOrder = placeOrder;
 window.browseMenu = browseMenu;
 window.viewOrders = viewOrders;
 
-// Initialize app when DOM is ready
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeApp);
 } else {
     initializeApp();
+}
+// Add this function to clear order history
+function clearOrderHistory() {
+    orders = [];
+    saveOrdersToStorage();
+    if (currentSection === 'orders') {
+        renderOrders();
+    }
+    showToast('Order history cleared successfully', 'success');
 }
