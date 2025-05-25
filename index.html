@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusCanteen - Food Ordering</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="icon" href="assets/a.jpg" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                CampusCanteen
+            </div>
+            <div class="nav-items">
+                <a href="#" class="nav-link active" data-section="landing">Home</a>
+                <a href="#" class="nav-link" data-section="menu">Menu</a>
+                <a href="#" class="nav-link" data-section="orders" id="my-orders-btn">My Orders</a>
+                <div class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="landing-section" class="landing-section">
+            <div class="hero">
+                <!-- Replace the floating-shapes div content with this -->
+                <div class="floating-shapes">
+                    <i class="fas fa-pizza-slice shape shape-1"></i>
+                    <i class="fas fa-hamburger shape shape-2"></i>
+                    <i class="fas fa-ice-cream shape shape-3"></i>
+                    <i class="fas fa-coffee shape shape-4"></i>
+                    <i class="fas fa-cookie shape shape-5"></i>
+                </div>
+                <div class="hero-content">
+                    <h1 class="animated-text">Delicious Food at Your Fingertips</h1>
+                    <p class="animated-text-delay">Skip the queue, order your favorite campus meals online!</p>
+                    <button id="order-btn" class="cta-button glow-effect" onclick="showSection('menu')">Order Now</button>
+                </div>
+                <div class="features">
+                    <div class="feature-card floating">
+                        <i class="fas fa-clock"></i>
+                        <h3>Quick Ordering</h3>
+                        <p>Save time with our easy ordering system</p>
+                    </div>
+                    <div class="feature-card floating">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Fresh Food</h3>
+                        <p>Prepared fresh when you order</p>
+                    </div>
+                    <div class="feature-card floating">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Easy Tracking</h3>
+                        <p>Track your order status in real-time</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu-section" class="menu-section hidden">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Menu</h2>
+                    <!-- Update the search-bar div in menu-section -->
+                    <div class="search-bar">
+                        <div class="search-input-wrapper">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="search-input" placeholder="Search menu items...">
+                        </div>
+                        <select id="filter-category" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="snacks">Snacks</option>
+                            <option value="main-course">Main Course</option>
+                            <option value="beverages">Beverages</option>
+                        </select>
+                        <select id="filter-veg" class="filter-select">
+                            <option value="all">All Types</option>
+                            <option value="veg">Vegetarian</option>
+                            <option value="non-veg">Non-Vegetarian</option>
+                        </select>
+                        <select id="filter-spicy" class="filter-select">
+                            <option value="all">All Spice Levels</option>
+                            <option value="mild">Mild</option>
+                            <option value="medium">Medium</option>
+                            <option value="hot">Hot</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="menu-items" id="menu-items"></div>
+            </div>
+        </section>
+
+        <section id="orders-section" class="orders-section hidden">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My Orders</h2>
+                </div>
+                <div class="orders-list" id="orders-list"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add this if not already present -->
+    <div id="cart-modal" class="cart-modal hidden">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">Total: <span id="cart-total">₹0</span></div>
+            <button id="place-order-btn" class="place-order-btn">
+                <i class="fas fa-shopping-bag"></i> Place Order
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#" data-section="menu">Menu</a>
+                <a href="#" data-section="orders">My Orders</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> support@campuscanteen.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CampusCanteen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="toast hidden" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
